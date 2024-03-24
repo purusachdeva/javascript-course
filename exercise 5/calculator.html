@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <section>
+      <div class="modal">
+
+        <div class="display">
+          <p>
+            <span id="display">
+              0
+            </span>
+          </p>
+        </div>
+
+        <div class="buttons">
+          <p>
+            <button onclick="
+              display += '1';
+              console.log(display);
+            ">1</button>
+      
+            <button onclick="
+              display += '2';
+              console.log(display);
+            ">2</button>
+      
+            <button onclick="
+              display += '3';
+              console.log(display);
+            ">3</button>
+      
+            <button onclick="
+              display += ' + ';
+              console.log(display);
+            ">+</button>
+          </p>
+          
+          <p>
+            <button onclick="
+              display += '4';
+              console.log(display);
+            ">4</button>
+      
+            <button onclick="
+              display += '5';
+              console.log(display);
+            ">5</button>
+      
+            <button onclick="
+              display += '6';
+              console.log(display);
+            ">6</button>
+      
+            <button onclick="
+              display += ' - ';
+              console.log(display);
+            ">-</button>
+          </p>
+      
+          <p>
+            <button onclick="
+              display += '7';
+              console.log(display);
+            ">7</button>
+      
+            <button onclick="
+              display += '8';
+              console.log(display);
+            ">8</button>
+      
+            <button onclick="
+              display += '9';
+              console.log(display);
+            ">9</button>
+      
+            <button onclick="
+              display += ' * ';
+              console.log(display);
+            ">*</button>
+          </p>
+  
+          <p>
+            <button onclick="
+              display += '0';
+              console.log(display);"
+            >0</button>
+      
+            <button onclick="
+              display += '.';
+              console.log(display);
+            ">.</button>
+      
+            <button onclick="
+              display = eval(display);
+              console.log(display);
+            ">=</button>
+      
+            <button onclick="
+              display += ' / ';
+              console.log(display);
+            ">/</button>
+          </p>
+      
+          <p>
+            <button onclick="
+            display = '';
+            console.log(display);
+          ">Clear</button>
+          </p>
+          
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      let display = '';
+    </script>
+  </body>
+</html>
