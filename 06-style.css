@@ -1,0 +1,52 @@
+* {
+  font-family: Roboto Condensed;
+  color: white;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+section button {
+  height: 120px;
+  width: 100px;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: black;
+}
+
+.icons {
+  font-size: 50px;
+}
+
+.reset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.reset button {
+  padding: 7px 15px;
+  color: black;
+}
+
