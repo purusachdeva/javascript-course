@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+    <button onclick="
+      localStorage.clear();
+      score.wins = 0;
+      score.losses = 0;
+      document.getElementById('wins').textContent = score.wins;
+      document.getElementById('losses').textContent = score.losses;
+    ">reset</button>
+
+    <p>Wins: <span id="wins"></span></p>
+    <p>Losses: <span id="losses"></span></p>
+
+    <script>
+      const score = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')) : { wins: 0, losses: 0 };
+
+      function playGame(guess) {
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        if (guess === result) {
+          console.log('You win!');
+          score.wins++;
+        } else {
+          console.log('You lose!');
+          score.losses++;
+        }
+
+        localStorage.setItem('score', JSON.stringify(score));
+
+        document.getElementById('wins').textContent = score.wins;
+        document.getElementById('losses').textContent = score.losses;
+      }
+    </script>
+  </body>
+</html>
