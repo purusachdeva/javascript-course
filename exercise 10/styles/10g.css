@@ -1,0 +1,14 @@
+.ten-g button {
+  margin-top: 20px;
+  background-color: rgb(230, 230, 230);
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ten-g .on {
+  background-color: black;
+  color: white;
+}
