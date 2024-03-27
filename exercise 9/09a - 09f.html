@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>9a</title>
+  </head>
+
+  <body>
+    <div class="nine-a">
+      <button>9a</button>
+    </div>
+    
+    <div class="nine-b">
+      <button class="b">9b</button>
+    </div>
+
+    <div class="nine-c">
+      <button onclick="
+        chose('heads');
+      ">heads</button>
+      <button onclick="
+        chose('tails');
+      ">tails</button>
+
+      <p class="result"></p>
+    </div>
+
+    <div class="nine-d">
+      <input placeholder="Name" class="name-input" onkeydown="
+      handleEvent(event);
+    ">
+      <button onclick="
+        submit();
+      ">Submit</button>
+      <p class="result"></p>
+    </div>
+    
+    <script>
+      const button = document.querySelector('button');
+
+      console.log(button);
+
+      const buttonB = document.querySelector('.b');
+      buttonB.innerHTML = '9b done!';
+
+      function chose(choice) {
+        const result = document.querySelector('.nine-c .result');
+        result.innerHTML = `You chose ${choice}`;
+      }
+
+      function submit() {
+        const input = document.querySelector('.name-input');
+        const name = input.value;
+
+        const result = document.querySelector('.nine-d .result');
+        result.innerHTML = `Your name is ${name}!`;
+      }
+
+      function handleEvent(event) {
+        if(event.key === 'Enter') {
+          submit();
+        }
+      }
+    </script>
+  </body>
+</html>
